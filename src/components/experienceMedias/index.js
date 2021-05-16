@@ -8,15 +8,22 @@ import './style.scss';
 export default function ExperienceMedia({ medias, tags }) {
 	return (
 		<div>
+			<h2>Media</h2>
 			<div className="experience-wrapper">
-				<h2>Media</h2>
 				{medias.map((media, index) => (
 					<Card className={'experience-content'} key={index}>
-						<CardMedia
-							className={'experience-cover'}
-							image={media.standard_resolution || media.video_download_url}
-							title="Contemplative Reptile"
-						/>
+						{media.video_download_url ? (
+							<video width="320" height="240" controls>
+								<source src={media.video_download_url} type="video/mp4" />
+							</video>
+						) : (
+							<CardMedia
+								className={'experience-cover'}
+								image={media.standard_resolution}
+								title="Contemplative Reptile"
+							/>
+						)}
+
 						<CardContent>
 							<Typography gutterBottom variant="h5" component="h2">
 								{media.caption}
