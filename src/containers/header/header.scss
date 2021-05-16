@@ -1,0 +1,22 @@
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	.logo {
+		width: 100px;
+	}
+	.nav {
+		display: flex;
+		justify-content: space-between;
+		.links {
+			text-decoration: none;
+			text-transform: uppercase;
+			color: white;
+			.counts {
+				margin-left: 5px;
+			}
+		}
+		.active {
+			background: #5454de;
+		}
+	}
+}

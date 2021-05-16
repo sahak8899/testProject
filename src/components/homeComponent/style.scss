@@ -1,0 +1,10 @@
+.card {
+	max-width: 345px;
+	margin: 20px auto;
+	.card-content-image img {
+		width: 140px;
+	}
+	.list-text {
+		text-transform: capitalize;
+	}
+}
